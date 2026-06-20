@@ -225,6 +225,48 @@
 
 
 </style>
+<style>
+.wa-support-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: wa-amber-ripple 2s infinite ease-in-out;
+}
+.wa-support-btn:hover { transform: scale(1.12); }
+.wa-support-btn:active { transform: scale(0.95); }
+@keyframes wa-amber-ripple {
+  0%   { box-shadow: 0 0 0 0 rgba(242,163,60,0.5), 0 0 0 8px rgba(242,163,60,0.25), 0 0 0 16px rgba(242,163,60,0.08); }
+  100% { box-shadow: 0 0 0 10px rgba(242,163,60,0), 0 0 0 22px rgba(242,163,60,0), 0 0 0 32px rgba(242,163,60,0); }
+}
+.wa-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 22px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #25D366;
+  background: rgba(37,211,102,0.14);
+  border: 1.5px solid #25D366;
+  box-shadow: 0 0 0 3px rgba(37,211,102,0.08);
+  transition: all 0.2s ease;
+}
+.wa-share-btn:hover {
+  background: rgba(37,211,102,0.22);
+  box-shadow: 0 0 0 5px rgba(37,211,102,0.12);
+  transform: translateY(-1px);
+}
+.wa-share-btn:active {
+  transform: translateY(0);
+}
+</style>
 </head>
 <body class="bg-brand-darkBg text-brand-white selection:bg-brand-amber selection:text-brand-darkBg overflow-x-hidden">
 
@@ -270,7 +312,7 @@
           <i class="fas fa-globe"></i>
           <span id="lang-toggle-label">EN</span>
         </button>
-        <a href="" target="_blank" class="text-brand-textMuted hover:text-brand-white text-2xl p-2 transition-colors hover:-translate-y-0.5 transform" title="GitHub Repository">
+        <a href="https://github.com/HilalRashad/saqr-releases" target="_blank" class="text-brand-textMuted hover:text-brand-white text-2xl p-2 transition-colors hover:-translate-y-0.5 transform" title="GitHub Repository">
           <i class="fab fa-github"></i>
         </a>
         <a href="https://github.com/HilalRashad/saqr-releases/releases/latest/download/Saqr_1.2.3_x64-setup.exe" 
@@ -295,7 +337,7 @@
               <span class="animate-ping absolute inline-flex h-2.5 w-2.5 rounded-full bg-green-400 opacity-80"></span>
               <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400 shadow-[0_0_8px_2px_rgba(74,222,128,0.8)]"></span>
             </span>
-            <span class="text-xs font-bold text-brand-amber font-mono"><span data-i18n="7">الاصدار الأخير v1.2.3 متوفر الآن</span></span>
+            <span class="text-xs font-bold text-brand-amber font-mono"><span data-i18n="7">الاصدار الأخير v1.2.1 متوفر الآن</span></span>
           </div>
 
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-none mb-6 text-brand-white">
@@ -320,6 +362,19 @@
                 <i class="fas fa-play text-[10px] mr-px"></i>
               </span>
               <span class="relative"><span data-i18n="13">جرّب المحاكاة الحية</span></span>
+            </a>
+          </div>
+
+          <!-- WhatsApp Share -->
+          <div class="flex items-center" style="margin-top: 20px;">
+            <a href="https://wa.me/?text=%D8%AC%D8%B1%D9%91%D8%A8%20%D8%B5%D9%8E%D9%82%D8%B1%20%E2%80%94%20%D8%A3%D9%81%D8%B6%D9%84%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20%D8%AA%D9%86%D8%B2%D9%8A%D9%84%20%D9%8A%D9%88%D8%AA%D9%8A%D9%88%D8%A8%20%D8%A8%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%20%F0%9F%A6%85%0A%D8%A8%D9%84%D8%A7%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D8%A7%D8%AA%20%D9%88%D9%84%D8%A7%20%D9%81%D9%8A%D8%B1%D9%88%D8%B3%D8%A7%D8%AA%0Ahttps://hilalrashad.github.io/saqr-app/"
+               target="_blank" rel="noopener noreferrer"
+               class="wa-share-btn"
+               data-i18n-title="247">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16" fill="#25D366">
+                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+              </svg>
+              <span data-i18n="247">شارك مع صديق</span>
             </a>
           </div>
 
@@ -704,7 +759,7 @@
             </div>
             <h3 class="text-xl font-black mb-3 text-brand-white"><span data-i18n="61">تحويم المعاينة (Hover Thumb)</span></h3>
             <p class="text-brand-textMuted text-sm leading-relaxed">
-              <span data-i18n="62">تصفح تحميلاتك وسجل صيدك برؤية ناعمة؛ حيث يعرض لك صقر معاينة تفاعلية فورية لأغلفة المقاطع بمجرد مرور مؤشر الفأرة.</span>
+              <span data-i18n="62">تصفح تحميلاتك وسجل صيدك برؤية ناعمة؛ حيث يعرض لك صقر معاينة تفاعلية فورية لأغلفة المقاطع بمجرد تحويم مؤشر الفأرة.</span>
             </p>
           </div>
         </div>
@@ -722,10 +777,10 @@
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="inline-flex items-center gap-2 bg-brand-amber text-brand-darkBg text-[11px] font-black tracking-wide px-4 py-1.5 rounded-full mb-4">
           <i class="fas fa-wand-magic-sparkles"></i>
-          <span data-i18n="200">جديد كلياً في v1.2.3</span>
+          <span data-i18n="200">جديد كلياً في v1.2.1</span>
         </span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-white mb-4">
-          <span data-i18n="201">حدثنا صَقر — إليك الجديد</span>
+          <span data-i18n="201">أحدثنا صَقر — إليك الجديد</span>
         </h2>
         <p class="text-brand-textMuted text-base">
           <span data-i18n="202">أربع مزايا قوية وصلت تلقائياً لكل المستخدمين، مجاناً.</span>
@@ -823,8 +878,8 @@
             <span class="text-base font-black text-brand-white font-mono">v1.2.3</span>
             <span class="text-[10px] font-black text-brand-darkBg bg-brand-amber rounded px-2 py-0.5"><span data-i18n="223">الإصدار الحالي</span></span>
           </div>
-          <ul class="space-y-2 text-[13px] text-brand-textMuted">
-            <li class="flex items-center gap-2"><i class="fas fa-circle text-brand-amber" style="font-size:5px;"></i> <span data-i18n="242">إصلاح رابط "هذا الفيديو فقط" من داخل playlist (كان يبعت list= و index= لـ Hunt Engine)</span></li>
+          <ul class="space-y-2 text-[13px] text-brand-textMuted">إصلاح رابط "هذا الفيديو فقط" من داخل playlist
+            <li class="flex items-center gap-2"><i class="fas fa-circle text-brand-amber" style="font-size:5px;"></i> <span data-i18n="242"></span></li>
             <li class="flex items-center gap-2"><i class="fas fa-circle text-brand-amber" style="font-size:5px;"></i> <span data-i18n="243">تغطية اختبارية كاملة لـ videoInPlaylist flow</span></li>
           </ul>
         </div>
@@ -1218,7 +1273,7 @@
           </button>
           <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="p-6 pt-0 border-t border-brand-cardHover/30 text-sm sm:text-base text-brand-textMuted leading-relaxed">
-              <span data-i18n="120">ملف التثبيت الأصلي خفيف للغاية وحجمه أقل من</span> <strong class="text-brand-white font-mono">5 MB</strong><span data-i18n="121">. في أول إقلاع للتطبيق، سيقوم صقر بجلب الأدوات ومحرك المعالجة والدمج</span> <span class="text-brand-sky font-mono font-medium">(Hunt Engine)</span> <span data-i18n="122">بشكل مباشر وتلقائي لمرة واحدة فقط بمساحة</span> <strong class="text-brand-white font-mono">260-280 MB</strong> <span data-i18n="123">تقريباً، لضمان معالجة وصيد الفيديوهات محلياً على جهازك دون إعلانات أو خوادم وسيطة.</span>
+              <span data-i18n="120">ملف التثبيت الأصلي خفيف للغاية وحجمه أقل من</span> <strong class="text-brand-white font-mono">5 MB</strong><span data-i18n="121">. في أول إقلاع للتطبيق، سيقوم صقر بجلب الأدوات ومحرك المعالجة والدمج</span> <span class="text-brand-sky font-mono font-medium">(yt-dlp, ffmpeg, deno)</span> <span data-i18n="122">بشكل مباشر وتلقائي لمرة واحدة فقط بمساحة</span> <strong class="text-brand-white font-mono">260-280 MB</strong> <span data-i18n="123">تقريباً، لضمان معالجة وصيد الفيديوهات محلياً على جهازك دون إعلانات أو خوادم وسيطة.</span>
             </div>
           </div>
         </div>
@@ -1323,7 +1378,7 @@
           <h4 class="font-bold text-brand-white mb-4 tracking-wide text-xs uppercase text-brand-amber"><span data-i18n="140">المجتمع والتواصل</span></h4>
           <ul class="space-y-3.5 text-xs text-brand-textMuted font-medium">
             <li><a href="#faq" class="hover:text-brand-amber transition-colors"><span data-i18n="141">الأسئلة الشائعة والتشغيل</span></a></li>
-            <li><i class="fab fa-github ml-1"></i> <span data-i18n="142">مستودع الأكواد (GitHub)</span></a></li>
+            <li><a href="https://github.com/HilalRashad/saqr-releases" target="_blank" class="hover:text-brand-amber transition-colors"><i class="fab fa-github ml-1"></i> <span data-i18n="142">مستودع الأكواد (GitHub)</span></a></li>
             <li><a href="https://wa.me/201021677114" target="_blank" class="hover:text-brand-amber transition-colors"><i class="fab fa-whatsapp ml-1"></i> <span data-i18n="143">واتساب الدعم الفني</span></a></li>
             <li><button onclick="openDonateModal()" class="text-right text-brand-white hover:text-brand-amber font-bold transition-colors"><i class="fas fa-heart ml-1 text-red-500"></i> <span data-i18n="144">دعم صَقر مادياً</span></button></li>
           </ul>
@@ -1583,11 +1638,12 @@ const SAQR_I18N = {
   "239": { ar: `إصلاح تنزيل الترجمات (--write-auto-subs)`, en: `Fixed subtitle download (--write-auto-subs)` },
   "240": { ar: `اختيار لغة الترجمة: العربية / English / تلقائي / الكل`, en: `Subtitle language selection: Arabic / English / Auto / All` },
   "241": { ar: `وضع الإخراج: مدمج في الفيديو أو ملف .srt منفصل`, en: `Output mode: embedded in video or separate .srt file` },
-  "242": { ar: `إصلاح رابط "هذا الفيديو فقط" من داخل playlist (كان يبعت list= و index= لـ Hunt Engine)`, en: `Fixed "this video only" link from inside a playlist (was sending list= and index= to Hunt Engine)` },
+  "242": { ar: `إصلاح رابط "هذا الفيديو فقط" من داخل playlist`, en: `Fixed "this video only" link from inside a playlist` },
   "243": { ar: `تغطية اختبارية كاملة لـ videoInPlaylist flow`, en: `Full test coverage for the videoInPlaylist flow` },
   "244": { ar: `إصلاح موضع hover thumbnail في السجل (above/below ذكي)`, en: `Fixed hover thumbnail position in history (smart above/below)` },
   "245": { ar: `زر "مسح القائمة كاملة" من السجل مع تأكيد inline`, en: `"Clear full playlist" button in history with inline confirmation` },
   "246": { ar: `تحسين سرعة التحميل (--concurrent-fragments 4)`, en: `Download speed improvement (--concurrent-fragments 4)` },
+  "247": { ar: `شارك مع صديق`, en: `Share with a friend` },
   "ph1": { ar: `الصق رابط فيديو أو قائمة تشغيل من يوتيوب`, en: `Paste a YouTube video or playlist link` },
 };
 
@@ -2226,6 +2282,17 @@ const SAQR_IMG_EN = {
       io.observe(sec);
     })();
   </script>
+
+  <!-- Floating WhatsApp Support Button -->
+  <div style="position:fixed; bottom:24px; right:24px; z-index:100;">
+    <a href="https://wa.me/201021677114?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%2C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B5%D9%8E%D9%82%D8%B1"
+       target="_blank" rel="noopener noreferrer"
+       class="wa-support-btn" title="تواصل معنا عبر واتساب">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="26" height="26" fill="#fff">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+      </svg>
+    </a>
+  </div>
 
 </body>
 </html>
